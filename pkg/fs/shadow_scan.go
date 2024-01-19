@@ -10,7 +10,9 @@ import (
 )
 
 var (
-	ErrScannerAtEnd      = errors.New("scanner is at the end")
+	// ErrScannerAtEnd is returned when the scanner is at the end.
+	ErrScannerAtEnd = errors.New("scanner is at the end")
+	// ErrShadowScanStopped is returned when the scanner is stopped.
 	ErrShadowScanStopped = errors.New("scanner already stopped")
 )
 
@@ -25,10 +27,12 @@ type ShadowScan struct {
 	stop bool
 }
 
+// NewShadowScan creates a new scanner.
 func NewShadowScan() ShadowScanI {
 	return &ShadowScan{}
 }
 
+// Start starts the scanner.
 func (s *ShadowScan) Start(srcRootPath, dstRootPath string, fileCallback, dirCallback ScannerCallback) chan error {
 	errChan := make(chan error)
 
@@ -80,6 +84,7 @@ func (s *ShadowScan) Start(srcRootPath, dstRootPath string, fileCallback, dirCal
 	return errChan
 }
 
+// Stop stops the scanner.
 func (s *ShadowScan) Stop() {
 	s.stop = true
 }

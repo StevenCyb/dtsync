@@ -9,10 +9,12 @@ import (
 // Operation provides FS operations.
 type Operation struct{}
 
+// NewOperation creates a new operation.
 func NewOperation() OperationI {
 	return &Operation{}
 }
 
+// Delete a file or directory (recursively).
 func (o *Operation) Delete(path string) error {
 	if exists := o.Exists(path); exists {
 		return os.RemoveAll(path)

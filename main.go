@@ -15,6 +15,7 @@ func main() {
 	Run(args.Parse(os.Args))
 }
 
+// Run is the main function of the application.
 func Run(arguments args.Arguments) {
 	var (
 		srcErrChan, dstErrChan chan error
