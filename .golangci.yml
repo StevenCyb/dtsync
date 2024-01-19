@@ -1,0 +1,92 @@
+linters:
+  enable:
+    - asciicheck
+    - bidichk
+    - bodyclose
+    - containedctx
+    - contextcheck
+    - cyclop
+    - decorder
+    - dogsled
+    - dupl
+    - durationcheck
+    - errcheck
+    - errname
+    - errorlint
+    - exhaustive
+    - execinquery
+    - exportloopref
+    - forcetypeassert
+    - gochecknoinits
+    - gocognit
+    - goconst
+    - gocritic
+    - godot
+    - godox
+    - goerr113
+    - gofmt
+    - gofumpt
+    - goheader
+    - goimports
+    - gomnd
+    - gomodguard
+    - goprintffuncname
+    - gosec
+    - gosimple
+    - grouper
+    - importas
+    - ineffassign
+    - lll
+    - maintidx
+    - makezero
+    - misspell
+    - nakedret
+    - nestif
+    - nilerr
+    - nilnil
+    - nlreturn
+    - noctx
+    - nolintlint
+    - nosprintfhostport
+    - paralleltest
+    - prealloc
+    - predeclared
+    - promlinter
+    - revive
+    - rowserrcheck
+    - sqlclosecheck
+    - staticcheck
+    - stylecheck
+    - tagliatelle
+    - tenv
+    - thelper
+    - tparallel
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - wastedassign
+    - whitespace
+    - wsl
+
+linters-settings:
+  tagliatelle:
+    case:
+      use-field-name: true
+      rules:
+        json: snake
+        yaml: snake
+        bson: snake
+        xml: snake
+        avro: snake
+        mapstructure: snake
+  nestif:
+    min-complexity: 7
+  govet:
+    check-shadowing: true
+    enable-all: true
+  gocognit:
+    min-complexity: 35
+  cyclop:
+    max-complexity: 30
+    package-average: 15.0
