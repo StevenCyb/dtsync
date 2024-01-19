@@ -7,14 +7,14 @@ Currently supported arguments can be listed as follow.
 ```bash
 $ ./dtsync -help
 Usage of dtsync:
-  -dst string
+  -src string
         The source root path (required)
+  -dst string
+        The destination root path (required)
   -remove
         Remove files and directories in dst not included in src
   -replace
         Replace file on dst when different
-  -src string
-        The source root path (required)
 ```
 
 ### Default Case
